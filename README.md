@@ -2,7 +2,7 @@
 
 ## About
 
-_(TODO: insert a description of the project here!)_
+Making sure the commit works
 
 ### Authors
 
