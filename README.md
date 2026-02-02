@@ -2,12 +2,12 @@
 
 ## About
 
-Making sure the commit works
+
 
 ### Authors
 
-*   _(TODO: insert your names here!)_
-*  ...
+*  El Houston
+*  Oscar To
 
 ### Resources
 
