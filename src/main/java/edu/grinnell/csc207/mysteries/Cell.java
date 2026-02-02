@@ -41,7 +41,8 @@ public class Cell {
     }
 
     public static void main(String[] args) {
-        // Fill me in to test your hypotheses!
-        System.out.println("Hello World!");
+        Cell test = new Cell(2);
+        change2(test);
+        System.out.println(test.x);
     }
 }

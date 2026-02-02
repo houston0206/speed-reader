@@ -30,7 +30,9 @@ class Counter4 {
   
 public class Counters {
     public static void main(String[] args) {
-        // Fill me in to test your hypotheses!
+        Counter2 two = new Counter2();
+        two.increment(2);
+        System.out.println(two.value);
         System.out.println("Hello World!");
     }
 }
