@@ -47,47 +47,55 @@ access to (public vs private).
 
 What is the distinction between a static and non-static member (i.e., field or method)? In particular, imagine using this variant of a counter. Why does this (first) code not work? How do you fix it?
 
-If value is static, it becomes immutable. Remove the static. 
+If value is static, it belongs to the whole class and not a specific object, which means you can't use `this`. To fix it, make the int `value` non-static so that the increment method can be called on a new Counter object.
 
 In general, what is the rule for mixing static and non-static things? Does this (second) code work? Why or why not?
+
+You can't make a static reference to a non-static method or variable. The second code doesn't work because the printGreeting method is non-static, meaning it needs an object to access it and there isn't an object.
 
 
 #### Problem 1.4
 
 Does the following code snippet behave as you expect? Why? How do you fix its behavior?
 
+It doesn't. I'd expect the equality operator to work, since both are set to 0, but since they're comparing objects, it won't work. We can fix its behaviour by comparing c1.value and c2.value instead.
+
 With this in mind, does this code behave as you expect?
 
+Yes. They're comparing references to string literals, which are the same. When you declare a new immutable string, it checks the string pool for an equivalent value, and makes the reference values equal. This has been shown earlier.  
+
 How about this snippet? What’s the difference between these two snippets and why?
+
+The second snippet doesn't work because the scanner doesn't use the string pool, so each time the scanner is used, the string is given its own reference value. Since (s3 == s4) is checking for reference equality, not value, it won't work.
 
 #### Problem 2.1
 
 (always: ✓, sometimes: ?, never: ✗)
 
 *   Point A:
-    + `x1 == 0`:
-    + `x2 < 0`:
+    + `x1 == 0`: ?
+    + `x2 < 0`: ?
 *   Point B:
-    + `x1 == 0`:
-    + `x2 < 0`:
+    + `x1 == 0`: ?
+    + `x2 < 0`: ✗
 *   Point C:
-    + `y1 < 5`:
-    + `y2 > 0`:
+    + `y1 < 5`: ?
+    + `y2 > 0`: ✓
 *   Point D:
-    + `z > y1`:
-    + `z < 0`:
+    + `z > y1`: ?
+    + `z < 0`: ✗
 
 #### Problem 2.2
 
 (always: ✓, sometimes: ?, never: ✗)
 
 |         | `s.length >= 2` | `ret.length() > 0` | `ret.length() % 2 == 0`
-| ------- | --------------- | ------------------ | -----------------------
-| Point A |                 |                    |
-| Point B |                 |                    |
-| Point C |                 |                    |
-| Point D |                 |                    |
-| Point E |                 |                    |
+| ------- | --------------- | ------------------ | -----------------------|
+| Point A |        ?        |        ✗          |            ✓           |
+| Point B |        ✓        |        X          |            ✓           |
+| Point C |        ?        |        ?          |           ✓            |
+| Point D |        ?        |        ✓          |          ✓             |
+| Point E |        X        |         ✓         |           ✓            |
 
 ### Empirical Complexity Analysis
 

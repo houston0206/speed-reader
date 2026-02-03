@@ -20,7 +20,7 @@ public class Ref {
         String s2 = "hello";
         System.out.println(s1 == s2);
 
-        // Snipper 2
+        // Snippet 2
         Scanner in = new Scanner(System.in);
         String s3 = in.nextLine();    // Suppose the user types the same
         String s4 = in.nextLine();    // line for both s3 and s4...

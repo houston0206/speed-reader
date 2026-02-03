@@ -1,7 +1,7 @@
 package edu.grinnell.csc207.mysteries;
 
 class StaticCounterExample {
-    public static int value;
+    public int value;
     public StaticCounterExample() {
         value = 0;
     }
@@ -16,7 +16,7 @@ public class StaticExample {
     }
 
     public static void main(String[] args) {
-        // Uncomment this line and find out if it works!
+        // Uncomment this line and find out if it works! (It does not)
         // printGreeting();
     }
 }
