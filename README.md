@@ -2,7 +2,8 @@
 
 ## About
 
-_(TODO: fill me in!)_
+This project is a speed reader that displays one word at a time to increase reading speed.
+Also includes: Semantic Mysteries lab from Monday and Empirical Complexity lab from Friday.
 
 ### Authors
 
@@ -11,8 +12,8 @@ _(TODO: fill me in!)_
 
 ### Resources
 
-*   _(TODO: list your resources here!)_
-*   ...
+*   Class lab page: https://osera.cs.grinnell.edu/ttap/data-structures-labs/speed-reader.html 
+*   Java scanner class: https://www.w3schools.com/java/java_user_input.asp 
 *   `DrawingPanel.java` adapted from _[Building Java Programs](https://www.buildingjavaprograms.com/) by Reges and Stepp.
 
 ## Write-up
@@ -99,4 +100,13 @@ The second snippet doesn't work because the scanner doesn't use the string pool,
 
 ### Empirical Complexity Analysis
 
-_(TODO: fill me in!)_
+How accurate is the operation counting method of measuring time complexity compared to the wall-clock method for understanding how the time complexity scales with the size of the input?
+
+Measuring time complexity seems more accurate. The operation counting method puts it on a linear scale, but the array access gets much bigger with the size of the array and the data isn't as easy to look at on a graph. The time complexity measurement uses a log scale and you can see the differences between the functions more easily. Compute1 does not return a value if the array is too big because it takes too long. Compute2 has a typical scale, and Compute3 takes around the same number of time regardless of array size.
+
+Graphs:
+![Graph for part 1](Graph1.png)
+![Graph for part 2](Graph2.png)
+
+
+### Usability Testing

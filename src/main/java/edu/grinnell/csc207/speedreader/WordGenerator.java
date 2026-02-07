@@ -1,28 +1,68 @@
 package edu.grinnell.csc207.speedreader;
 
-/** TODO: implement this class and add a doc comment! */
+import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+
+/** 
+ * WordGenerator class: constructs and implements functions for a scanner reading
+ * from a text file
+ */
 public class WordGenerator {
-    /** TODO: implement me and add an appropriate doc comment! */
-    public WordGenerator(String filename) {
+    public Scanner scan;
+    private int wordCount;
+    private int sentenceCount; 
+
+    /** 
+     * Constructs the wordGenerator
+     * @param fileName a string used to load the text file to be read from
+     */
+    public WordGenerator(String filename) throws IOException{
+        File declare = new File(filename);
+        this.scan = new Scanner(declare) ;
     }
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /** 
+     * Checks if there is a token remaining in the file
+     * @return a boolean
+     */
     public boolean hasNext() {
+        if (this.scan.hasNext()){
+            return true;
+        }
         return false;
     }
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /** 
+     * Returns the next token (word) in the file and updates the wordCount and 
+     * sentenceCount variables accordingly.
+     * @return the next word, if it exists
+     */
     public String next() {
+        if (this.scan.hasNext()){
+            String word = this.scan.next();
+            this.wordCount++;
+            if (word.contains("?") || word.contains("!") || word.contains(".")){
+                this.sentenceCount++;
+            }
+            return word;
+        }
         return null;
     }
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /** 
+     * Returns the private value for sentenceCount
+     * @return the value of the sentenceCount field
+     */
     public int getWordCount() {
-        return -1;
+        return wordCount;
     }
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /** 
+     * Returns the private value for sentenceCount
+     * @return the value of the sentenceCount field
+     */
     public int getSentenceCount() {
-        return -1;
+        return sentenceCount;
     }
 }
