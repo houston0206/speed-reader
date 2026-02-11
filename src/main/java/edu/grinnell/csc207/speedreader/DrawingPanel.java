@@ -913,7 +913,7 @@ public final class DrawingPanel extends FileFilter
     }
     
     // closes the frame and exits the program
-    private void exit() {
+    public void exit() {
         if (isGraphical()) {
             frame.setVisible(false);
             frame.dispose();

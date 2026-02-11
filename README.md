@@ -15,6 +15,8 @@ Also includes: Semantic Mysteries lab from Monday and Empirical Complexity lab f
 *   Class lab page: https://osera.cs.grinnell.edu/ttap/data-structures-labs/speed-reader.html 
 *   Java scanner class: https://www.w3schools.com/java/java_user_input.asp 
 *   `DrawingPanel.java` adapted from _[Building Java Programs](https://www.buildingjavaprograms.com/) by Reges and Stepp.
+*   VSCode
+*   Maven compiler 0.45.1
 
 ## Write-up
 
@@ -110,3 +112,68 @@ Graphs:
 
 
 ### Usability Testing
+Training texts:
+
+Bee movie script: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://gist.github.com/MattIPv4/045239bc27b16b2bcf7a3a9a4648c08a&ved=2ahUKEwis0Keop8-SAxXsvokEHR1MKk4QFnoECAwQAQ&usg=AOvVaw3v_ddlANg4L7M5co0WX_30
+The first two paragraphs of "From C to java" (please find this funny): https://osera.cs.grinnell.edu/ttap/data-structures/from-c-to-java.html 
+Wikipedia article on the first crusade: https://en.wikipedia.org/wiki/First_Crusade
+Britannica article about world war 1: https://www.britannica.com/video/Overview-start-details-World-War-I-assassination-June-28-1914/-191716 
+
+Question texts:
+Participant: Paul Spang (spangpau@grinnell.edu)
+
+Antarctic.txt (Text editor)
+Source: Intro from "Heart of the Antarctic" by Ernest Shackleton
+1. Name one of the reasons men go to the "void spaces of the world".
+Little voice in their head (Correct)
+2. How could you be able to tell that this passage is about Antarctica?
+References to cold, southern expanse, polar (Correct)
+3. What is the name of the expedition that was mentioned?
+Discovery (Correct)
+4. What was the farthest latitude south reached?
+87 15 (Wrong)
+5. What is the "mystery" the author talks about at the end of the passage?
+The Barrier (Correct)
+
+Passage 2.txt (Speed reader- 500)
+Source: Passage from the book Kane and Abel by Jeffrey Archer
+1. What is the main conflict in this passage?
+The main character got kicked off the board of the bank (Correct)
+2. What was the outcome of the conflict? (Give numbers)
+He lost 17-12 (Correct)
+3. What can you infer about this character based on his interactions with his doorman?
+No idea (Wrong)
+4. What did the character lose?
+His job as chairman of the bank (Correct)
+5. How does the character feel about this?
+He feels like he lost everything, almost suicidal (Correct)
+
+winterolympics.txt (Speed reader- 350)
+Source: https://www.britannica.com/sports/Winter-Olympic-Games
+1. What year was the first Winter Olympics?
+1924 (Correct)
+2. Where are the 2026 Winter Olympics being held?
+Milano Cortina (Correct)
+3. What was the only sport women participated in in the first Winter Olympics?
+Skating (Correct)
+4. What percentage of athletes in the 2026 Olympic Games are female?
+47 percent (Correct)
+5. True or false? There are over ten times more athletes in this year's games than in the first one.
+True (Correct)
+
+Passage1.txt (Speed reader- 250)
+Source: Passage from the book Kane and Abel by Jeffrey Archer
+1. What is the main event happening in the passage?
+Birth of a father's son (Correct)
+2. Where was the earthquake that killed those people?
+San Francisco (Correct)
+3. Who is the character the narration is following (as in what industry/his standing/relevance to the setting)
+President of a bank who will build a new hospital wing, so relevant to the hospital (Correct)
+4. How does the character feel about the event happening?
+He is nervous (Correct)
+5. Why does the character feel this way?
+Because he's worried it might not be a boy (Correct)
+
+
+Did your participants demonstrate that they were able to comprehend what they were reading with your speed reader?
+Yes. He got 18 out of 20 total questions (90 percent). One wrong answer was in the text editor, and the other one was from the 500 WPM reading, so the texts were mostly comprehensible regardless of speed. He somewhat struggled with getting used to the 500 WPM one, but his comprehension remained high.

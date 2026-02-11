@@ -11,11 +11,14 @@ import java.io.IOException;
  */
 public class SpeedReader {
 
-    public static void drawPanel(int width, int height, int fontSize, String word) {
-        DrawingPanel frame = new DrawingPanel(width, height);
-        Graphics g = frame.getGraphics();
-        g.setFont(new Font("Courier", Font.BOLD, fontSize));
+    public static void drawPanel(double timePerWord, String word, DrawingPanel frame, Graphics g) {
         g.drawString(word, 100, 100);
+        try {
+            Thread.sleep((long) (timePerWord));  
+        } catch (Exception InterruptedException) {
+            System.out.println("Interrupted.");
+        }
+        frame.clearWithoutRepaint();
     }
 
 
@@ -37,13 +40,11 @@ public class SpeedReader {
         int fontSize = Integer.parseInt(args[3]);
         double timePerWord = 60000.0 / Integer.parseInt(args[4]);
         WordGenerator speedReader = new WordGenerator(fileName);
+        DrawingPanel frame = new DrawingPanel(width, height);
+        Graphics g = frame.getGraphics();
+        g.setFont(new Font("Courier", Font.BOLD, fontSize));
         while (speedReader.hasNext()){
-            drawPanel(width, height, fontSize, speedReader.next());
-            try {
-                Thread.sleep((long) (timePerWord));  
-            } catch (Exception InterruptedException) {
-                System.out.println("Interrupted.");
-            }
+            drawPanel(timePerWord, speedReader.next(), frame, g);
         }
         System.out.println("Number of words rendered: " + speedReader.getWordCount());
         System.out.println("Number of sentences rendered: " + speedReader.getSentenceCount());
