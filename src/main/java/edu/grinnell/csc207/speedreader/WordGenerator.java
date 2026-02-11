@@ -42,7 +42,7 @@ public class WordGenerator {
         if (this.scan.hasNext()){
             String word = this.scan.next();
             this.wordCount++;
-            if (word.contains("?") || word.contains("!") || word.contains(".")){
+            if (word.endsWith("?") || word.endsWith("!") || word.endsWith(".")){
                 this.sentenceCount++;
             }
             return word;
